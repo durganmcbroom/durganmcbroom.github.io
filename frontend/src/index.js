@@ -1,12 +1,12 @@
 import React, {useState} from 'react';
 import ReactDOM from 'react-dom/client';
-import reportWebVitals from './reportWebVitals';
 import {createBrowserRouter, RouterProvider,} from "react-router-dom";
 import Home from "./routes/Home";
 import CIGames from "./routes/CIGames";
 import light from "./theme/light";
 import {ThemeProvider} from "@mui/material/styles";
-import {CssBaseline} from "@mui/material";
+import {CssBaseline, useMediaQuery} from "@mui/material";
+import dark from "./theme/dark";
 
 
 const router = createBrowserRouter([
@@ -30,8 +30,9 @@ root.render(
 );
 
 function Main() {
-    const [theme, setTheme] = useState(light)
+    const prefersDarkMode = useMediaQuery('(prefers-color-scheme: dark)');
 
+    const [theme, setTheme] = useState(prefersDarkMode ? dark : light);
     return (
         <SetThemeContext.Provider value={(thisTheme) => {
             setTheme(thisTheme)
@@ -44,9 +45,4 @@ function Main() {
     )
 }
 
-/**/
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
 

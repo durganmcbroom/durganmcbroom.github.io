@@ -51,6 +51,7 @@ export function CIGames() {
                     right.
                 </Typography>
                 <img
+                    alt={"A graphing calculator running a pong program."}
                     src={tiImage}
                     style={{
                         width: "20vh",
@@ -63,6 +64,7 @@ export function CIGames() {
                 md: "column", lg: "row"
             }} sx={{margin: "30px 0"}}>
                 <img
+                    alt={"A command line interface running a game of snake."}
                     src={csnakepng}
                     style={{
                         width: "20vh",
@@ -87,6 +89,7 @@ export function CIGames() {
                     <Link to={"https://github.com/durganmcbroom/snake-rust"}>Code is here.</Link>
                 </Typography>
                 <img
+                    alt={""}
                     src={rustsnakepng}
                     style={{
                         width: "20vh",

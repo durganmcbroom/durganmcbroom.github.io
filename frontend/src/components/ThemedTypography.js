@@ -7,7 +7,7 @@ function ThemedTypography(props) {
     let newProps = {
         ...props,
         sx: {
-            ... props.sx,
+            ...props.sx,
             fontWeight: (props.bolded ? 700 : 400),
             color: theme.palette.h1.primary
         }

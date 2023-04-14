@@ -12,29 +12,28 @@ export function startPong() {
 }
 
 window.addEventListener("keydown", function(event) {
-
-    if (event.keyCode == 38) {
+    if (event.keyCode === 38) {
         player1.moving = true;
         player1.dir = 1;
-    } else if (event.keyCode == 40) {
+    } else if (event.keyCode === 40) {
         player1.moving = true;
         player1.dir = -1;
-    } else if (event.keyCode == 87) {
+    } else if (event.keyCode === 87) {
         player2.moving = true;
         player2.dir = 1;
-    } else if (event.keyCode == 83) {
+    } else if (event.keyCode === 83) {
         player2.moving = true;
         player2.dir = -1;
     }
 });
 window.addEventListener("keyup", function(event) {
-    if (event.keyCode == 38) {
+    if (event.keyCode === 38) {
         player1.moving = false;
-    } else if (event.keyCode == 40) {
+    } else if (event.keyCode === 40) {
         player1.moving = false;
-    } else if (event.keyCode == 87) {
+    } else if (event.keyCode === 87) {
         player2.moving = false;
-    } else if (event.keyCode == 83) {
+    } else if (event.keyCode === 83) {
         player2.moving = false;
     }
 });
@@ -123,7 +122,7 @@ function startRound() {
     const x = canvas.width / 2;
     const y = canvas.height / 2;
     const dir = Math.random() > 0.5? 1: -1;
-    const speed = Math.random() *1.5 + 0.5;
+    const speed = Math.random() *1.5 + 1.5;
     const intercept = ((newSlope * x) - y) * -1;
     //slope, x, y, dir, intercept, speed
     ballClass = new ball(newSlope, x,  y, dir , intercept, speed);
@@ -184,11 +183,11 @@ class paddle {
     }
     ballBounce(x, y) {
 
-        if (this.side == 1) {
+        if (this.side === 1) {
             if (x + 15 > this.x && (y > this.y - 50 && y -15 < this.y)) {
                 return true;
             }
-        } else if (this.side == 2) {
+        } else if (this.side === 2) {
             if (x < this.x +10 && (y > this.y - 50 && y - 15 < this.y)) {
                 return true;
             }

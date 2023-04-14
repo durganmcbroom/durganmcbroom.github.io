@@ -4,31 +4,18 @@ import Header from "../components/Header";
 import ThemedTypography from "../components/ThemedTypography";
 import SudocodeNav, {SudocodeNavLink} from "../components/SudocodeNav";
 
-//
-const Item = styled(Paper)(({theme}) => ({
-    padding: "15px",
-    textAlign: "center"
-}));
-
-// const ContactCard =
-
 function Home() {
-
     return (
         <div>
             <Header/>
             <Container maxWidth="md" sx={{margin: "20px auto"}}>
                 <Typography variant="body1">
-                    Im a hobbyist fullstack, Kotlin, Java, Framework and Application developer. I love playing
-                    Ultimate
-                    (Frisbee), Ice Hockey, Jazz (Also sax), and playing with my dog 🐕!
+                    Hey, I'm Durgan. Primarily, I'm a programmer and live for computer science/software design. As a hobbyist fullstack software
+                    developer I work a lot on open sourced APIs and Frameworks, generally in or around the JVM
+                    ecosystem. In my spare time I play the Alto Saxophone (Gigging around Seattle), am an avid
+                    player of Ultimate (Frisbee), and hang out with my dog 🐕
                 </Typography>
-
-                <ThemedTypography variant={"h2"} fontSize={{
-                    sml: 25,
-                    md: 30,
-                    lrg: 35,
-                }} sx={{margin: "30px 0"}}>
+                <ThemedTypography fontSize={30} sx={{margin: "30px 0"}}>
                     My Projects:
                 </ThemedTypography>
                 <SudocodeNav>
@@ -53,7 +40,6 @@ function Home() {
                         descriptor={"A tool i used to learn languages: {}"}
                     />
                 </SudocodeNav>
-
             </Container>
         </div>)
 }

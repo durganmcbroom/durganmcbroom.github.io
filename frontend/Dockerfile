@@ -1,8 +1,12 @@
 FROM node:latest
 WORKDIR /usr/src/app
-COPY ./build ./build
+COPY ./src ./src
+COPY ./public ./public
+COPY package*.json ./
+RUN npm update
+RUN npm install
+RUN npm run build
 EXPOSE 3000
-RUN ls
 RUN npm install -g serve
-RUN serve -s build
+CMD [ "serve", "-s", "build" ]
 

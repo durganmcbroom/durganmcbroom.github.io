@@ -1,6 +1,7 @@
 import {useTheme} from "@mui/material/styles";
 import {Link} from "react-router-dom";
 import {useState} from "react";
+import {useMediaQuery} from "@mui/material";
 
 function CodeSpan(props) {
     return <span style={{
@@ -40,9 +41,11 @@ export function SudocodeNavLink({to, name, descriptor}) {
     let rust = theme.palette.code.rust
     let [hover, setHover] = useState(false)
 
-    return (<div style={{margin: "8px 0"}}>
+    const margin = useMediaQuery(theme.breakpoints.down("md")) ? "20px 0" : "8px 0"
+
+    return (<div style={{margin: margin}}>
             <Link to={to} style={{
-                margin: "20px",
+                margin: "0 20px",
                 textDecorationLine: "none",
                 borderBottom: "1px solid " + (hover ?  theme.palette.text.hover : theme.palette.text.primary)
             }} onMouseEnter={() => {
