@@ -25,7 +25,7 @@ function Home() {
                         descriptor={"A Minecraft Modding platform: {}"}
                     />
                     <SudocodeNavLink
-                        to={"https://github.com/durganmcbroom/mywebsite"}
+                        to={"https://github.com/durganmcbroom/durganmcbroom.github.io"}
                         name={"ThisWebsite"}
                         descriptor={"Its github: {}"}
                     />
