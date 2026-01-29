@@ -17,7 +17,6 @@ jobs:
           node-version: "24.13.0"
           registry-url: "https://registry.npmjs.org"
       - run: npm ci && npm run build
-        working-directory: web/
         env:
           CI: false
       - uses: actions/configure-pages@v5
