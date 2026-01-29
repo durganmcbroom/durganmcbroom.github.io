@@ -87,7 +87,7 @@ const SOCIALS: Social[] = [
     {name: "Github", link: "https://github.com/durganmcbroom", icon: <Github size={18}/>},
     {name: "LinkedIn", link: "https://linkedin.com/in/durganmcbroom", icon: <Linkedin size={18}/>},
     {name: "Email", link: `mailto:${PERSONAL_DETAILS.email}`, icon: <Mail size={18}/>},
-    {name: "Resume", link: "/public/resume.pdf", icon: <FileText size={18}/>},
+    {name: "Resume", link: "/resume.pdf", icon: <FileText size={18}/>},
 ];
 
 
@@ -184,7 +184,7 @@ const Footer: React.FC = () => (
         <p>{PERSONAL_DETAILS.footerText}</p>
         <div className="flex gap-6 font-medium">
             <a href="#" className={`hover:text-slate-600 transition-colors`}>Home</a>
-            <a href="/public/resume.pdf" className={`hover:text-slate-600 transition-colors`}>Resume</a>
+            <a href="/resume.pdf" className={`hover:text-slate-600 transition-colors`}>Resume</a>
             <a href={`mailto:${PERSONAL_DETAILS.email}`}
                className={`hover:text-slate-600 transition-colors`}>Contact</a>
         </div>
