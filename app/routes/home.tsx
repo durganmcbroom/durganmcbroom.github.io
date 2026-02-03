@@ -31,10 +31,10 @@ const PERSONAL_DETAILS = {
     firstName: "Durgan",
     lastName: "McBroom",
     email: "durganmcbroom@gmail.com",
-    bio: `Hey, I'm Durgan. I'm a first-year student at MIT planning to student computer science (course 6)
-    and possibly physics (8). I love developing software, and have worked on many projects throughout the years--mostly 
-    focusing on open-sourced API/framework development. Outside of STEM, I love to: play the saxophone and clarinet (at 
-    Garfield High School and with MIT FJE); play Ultimate Frisbee (2024 HS state champs / 2x USA nationals); and cook 
+    bio: `Hey, I'm Durgan. I'm a first-year student at MIT planning to study Course 6 (Computer science).
+    In my free time, I love developing software, and have worked on many projects throughout the years--mostly 
+    focusing on open-sourced APIs/frameworks. Outside of STEM, I love to: play the saxophone and clarinet (at 
+    Garfield High School and with MIT FJE); play Ultimate Frisbee (2024 HS state champs / 2x USA HS/club nationals); and cook 
     whenever I can find the time :).`,
     footerText: `© ${new Date().getFullYear()} Durgan McBroom`,
 };
